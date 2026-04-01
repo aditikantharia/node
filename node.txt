@@ -1,0 +1,48 @@
+create a node folder 
+
+open the node.js
+
+dafault file banava mate : npm init -y
+
+manual package.json mate : mpm init
+
+Press ^C at any time to quit.
+package name: (node)
+version: (1.0.0) 1.0.1
+description: create node server basic
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: aditi kantharia
+license: (ISC)
+type: (commonjs)
+About to write to D:\aditi\node\package.json:
+
+{
+  "name": "node",
+  "version": "1.0.1",
+  "description": "create node server basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aditi kantharia",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+Is this OK? (yes) yes
+
+yes kro etle bani jse
+
+node.js ma docx ma javanau ema left side ma jay ne file system ma
+ javanu ema ctrl+f kri ne fs.append krvanu ...
+
+ index.js banavanu ema lakhvanu code
+
+ terminal ma lakhvanu : node index.js
+ new file created
+ evu aavse
+ badhu code krye tyre  : node index.js krvanu etle create thatu jay...
