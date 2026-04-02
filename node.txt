@@ -46,3 +46,19 @@ node.js ma docx ma javanau ema left side ma jay ne file system ma
  new file created
  evu aavse
  badhu code krye tyre  : node index.js krvanu etle create thatu jay...
+
+ 02-04
+ npm lakhvanu google ma
+ pachi ema chalk lakhvanu search bar ma
+ terminal ma : npm i chalk (lakvanu...)
+
+ package.json ma type ma module krvanu commonjs ni place par..
+ code lakhvano index.js ma and ru  krvanu trerminal ma : node index.js
+
+package uninstall krva mate trerminal ma : npm uninstall chalk
+
+packag install terminal ma :  npm i axios --save -dev
+
+create a foler whic one name of ExpressJS..
+terminal ma : npm init -y
+PACKAGE.JSON ma type ma module krvanu commonjs ni place par..

@@ -1,74 +1,110 @@
-// import { appendFile } from 'node:fs';
+//const fs = require("node:fs");
 
-// appendFile('message.txt', 'data to append', (err) => {
-//   if (err) throw err;
-//   console.log('The "data to append" was appended to file!');
+// fs = file system
+
+// create file
+// fs.appendFile(path, data, cb fnc)
+// fs.appendFile("hello.txt", "Hello World !!", (e) => {
+//   if (e) throw error;
+//   console.log("create a hello.txt")
 // });
-const { error, profileEnd } = require("node:console");
-const fs = require("node:fs");
-//create a file
-//fs.appendfile(path, data, callback fnc)
-fs.appendFile("hello.txt", "hello world !", (e) => {
-  if (e) throw error;
-  console.log("new file created");
-});
-fs.appendFile("index.html", "<h1>Hello World!</h1>", (e) => {
-  if (e) throw error;
-  console.log("crete index.html file");
-});
-//crete a folder
-//fs.mkdir(path,callback fnc)
-// fs.mkdir("images",(e)=>{
-//     if (e) throw error;
-//     console.log("create a image folder");
+// isuue: every time you run the file that put new data with exiting data, so that print same data every time you run the file
+
+// fs.writeFile(path, data, cb fnc)
+// fs.writeFile("hello.txt", "Hello World !!", (e) => {
+//   if (e) throw error;
+//   console.log("create a hello.txt");
+// });
+// issue: when you change hello.txt file and after that you run the file that cmd will be replace whole file with above given data
+
+// =============================================
+
+// create a folder
+// fs.mkdir(path, cb fnc)
+// fs.mkdir("Pages", (e) => {
+//   if (e) throw error;
+//   console.log("create a new folder -- Pages");
 // });
 
-fs.mkdir("css/style.css", { recursive: true }, (e) => {
-  if (e) throw error;
-  console.log("create files into css folder");
-});
+// create a nested folder
+// fs.mkdir(path, {options}, cb fnc)
+// fs.mkdir("CSS/Home/Style", { recursive: true }, (e) => {
+//   if (e) throw error;
+//   console.log("create a nested folder of CSS");
+// });
 
-//rename files
-//fs.rename ('filename old', 'filename new', callback fnc)
-fs.rename("hello.txt", "world.txt", (e) => {
-  if (e) throw error;
-  console.log("rename files name to world.txt");
-});
+// ===================================================
 
-//remove folder
-//fs.rmdir(path, callback fnc)
-// fs.rmdir("images",(e) =>{
-//     if (e) throw error;
-//     console.log("remove images folder");
-// })
-
-//remove files
-//fs.rm(path, callback fnc)
-fs.rm("css/style.css", { recursive: true }, (e) => {
-  if (e) throw error;
-  console.log("remove style.css file");
-});
-
-//read file
-//fs.readFile(path, callback fnc)
-// fs.readFile("word.txt", "utf-8", (e, data) => {
+// read file
+// fs.readFile(path, fnc(e, data){})
+// fs.readFile("hello.txt", "utf-8", (e, data) => {
 //   if (e) throw error;
 //   console.log(data);
-//   console.log("read the file- word.txt");
+// });
+// as a response you get data (files inputes)
+
+// read folder
+// fs.readdir(path, fnc(e, files){})
+// fs.readdir("CSS/Home/Style", (e, files) => {
+//   if (e) throw error;
+//   console.log(files);
+// });
+// as a response you get a array of folder and files name
+
+// =======================================
+
+// copy files
+// fs.copyFile('path with file name', 'path with new file name', cb fnc)
+// fs.copyFile("hello.txt", "CSS/Home/Style/copy.txt", (e) => {
+//   if (e) throw error;
+//   console.log("File Copy Sucessfully");
 // });
 
-//read folder ==> give folders name array
-//fs.readdir(path, callback fnc)
-fs.readdir("css", (e, files) => {
-  if (e) throw error;
-  console.log(files);
-  console.log("read the css folder");
-});
+// ===========================================
+
+// rename file
+// fs.rename('old(exiting) file name with path', 'new file name with path', cb fnc )
+// fs.rename("hello.txt", "name.txt", (e) => {
+//   if (e) throw error;
+//   console.log("rename file");
+// });
+
+// nest file rename and move
+// fs.rename("rename.txt", "CSS/Home/Style/abc.txt", (e) => {
+//   if (e) throw error;
+//   console.log("rename file");
+// });
+
+// rename folder
+// fs.rename("CSS/Home/Component", "CSS/Home/Components", (e) => {
+//   if (e) throw error;
+//     console.log("rename folder");
+// });
+
+// ===================================================
+
+// delete file
+// fs.rm(file name with path, cb fnc)
+// fs.rm("name.txt", (e) => {
+//   if (e) throw error;
+//   console.log("delete file");
+// });
+
+// delete folder
+// fs.rm("Pages", { recursive: true, force: true }, (e) => {
+//   if (e) throw error;
+//   console.log("delete folder");
+// });
 
 
-// copy file
-// fs.copyFile(src(filename), dest(destination), callback fnc)
-fs.copyFile("index.html", "copy.html", (e) => {   
-    if (e) throw error;
-    console.log("file copied successfully from index.html to copy.html");
-});
+// fs.rm("name.js", (e) => {
+//   if (e) throw error;
+//   console.log("delete file");
+// });
+
+
+import chalk from 'chalk';
+
+console.log(chalk.bgWhite.blue('Hello world!'));
+console.log(chalk.bgMagentaBright.red('index.js files is ruuning'))
+

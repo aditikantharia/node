@@ -4,9 +4,16 @@
   "description": "create node server basic",
   "license": "ISC",
   "author": "aditi kantharia",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "adi": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2"
+  },
+  "devDependencies": {
+    "axios": "^1.14.0"
   }
 }
