@@ -62,3 +62,14 @@ packag install terminal ma :  npm i axios --save -dev
 create a foler whic one name of ExpressJS..
 terminal ma : npm init -y
 PACKAGE.JSON ma type ma module krvanu commonjs ni place par..
+
+
+
+
+04-04
+manually folder banavanu
+npm i express -->node module,package ni 2 file
+npm init -y -->package.json (extra code add thay)banava mate
+npm i ejs 
+
+package.json ma script ma aa lakhvanu test pachi comma kri ne, "start": "nodemon index.js"
