@@ -1,23 +1,7 @@
 import React from 'react';
-import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 export default function LoginPage() {
- const [formData, setformData] = useState({
-  email: "",
-  password: "",
-});
-
-  const [error, setError] = useState("");
-
-  const submitForm= ()=>{
-    console.log("submit form");
-
-  };
-  const handleChange = (e) => {
-    setformData({...formData,[e.target.name]:e.target.value});
-  };
-
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center bg-slate-50 overflow-hidden">
 
@@ -35,16 +19,11 @@ export default function LoginPage() {
           <p className="text-sm text-slate-500 mt-1">Sign in to your account</p>
         </div>
 
-        <form className="space-y-5" onSubmit={(e) => {e.preventDefault();
-          submitForm();
-        }}>
+        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
           <div className="space-y-1">
             <input
               type="email"
               placeholder="Email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
               className="w-full px-4 py-3 bg-white/60 border border-slate-200/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-200 focus:bg-white transition-all placeholder:text-slate-400 text-sm"
             />
           </div>
