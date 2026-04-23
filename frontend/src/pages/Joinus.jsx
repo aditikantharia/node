@@ -27,7 +27,7 @@ export default function JoinUsPage() {
     }
     catch (error) {
       console.log(error.response);
-      let Err = error.response?.data?.errors;
+      let Err = error.response?.data?.error;
       setError(Err);
 
       let Err2 = error.response?.data?.message;
