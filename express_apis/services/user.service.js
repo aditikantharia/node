@@ -27,3 +27,32 @@ return updateUser;
 
 };
 
+//chatgpt code
+// module.exports.updateUser = async ({ userId, email, username }) => {
+//   if (!username || !email) {
+//     throw new Error("all fields are required !!");
+//   }
+
+//   // 🔍 check user exists
+//   const user = await userModel.findById(userId);
+//   if (!user) {
+//     throw new Error("User not found");
+//   }
+
+//   // 🔍 check duplicate email (only if changed)
+//   if (user.email !== email) {
+//     const existingUser = await userModel.findOne({ email });
+//     if (existingUser) {
+//       throw new Error("Email already in use");
+//     }
+//   }
+
+//   // ✅ safe update
+//   const updatedUser = await userModel.findByIdAndUpdate(
+//     userId,
+//     { username, email },
+//     { new: true }
+//   );
+
+//   return updatedUser;
+// };

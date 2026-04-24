@@ -7,10 +7,13 @@ const cors = require("cors");
 const cookieParser=require("cookie-parser");
 
 //Router
-const userRoute = require("./routes/web/user.route");
-const adminRouter=require("./routes/web/admin.route");
+const userRoute = require("./routes/Web/user.route");
+const adminRouter=require("./routes/Web/admin.route");
+const productRouter=require("./routes/web/product.route");
 
 const app = express();
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 db();
@@ -32,6 +35,7 @@ app.get("/", (req, res) => {
 });
 app.use("/user",userRoute); //1.localhost:3005/user/register
 app.use("/admin",adminRouter);
+app.use('/product',productRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
