@@ -52,7 +52,7 @@ module.exports.GetSingleProduct = async (id) => {
 };
 
 //updtae product
-module.exports.UpdateProduct = async ({
+module.exports.UpdateProduct = async ({productId,
   name,
   description,
   stock,
@@ -64,7 +64,7 @@ module.exports.UpdateProduct = async ({
   brand,
   category,
 }) => {
-  const updateProduct = await productModel.fiindOneAndUpdtae(
+  const updateProduct = await productModel.findOneAndUpdate(
     { _id: productId },
     {
       name,
@@ -90,5 +90,5 @@ module.exports.UpdateProduct = async ({
 
 //delete product
 module.exports.DeleteProduct = async (id) => {
-  const deleteProduct = await productModel.findOneAndDelete({ _id: id });
+  return await productModel.findOneAndDelete({ _id: id });
 };
