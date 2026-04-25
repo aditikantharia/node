@@ -4,7 +4,7 @@ const adminService = require("../services/admin.service");
 
 module.exports.AllUser = async (req, res) => {
   try {
-    const users = await adminServide.allUser();
+    const users = await adminService.allUser();
 
     if (!users) {
       return res.status(404).json({ message: "users not found" });
